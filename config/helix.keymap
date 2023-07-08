@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -33,11 +34,11 @@ As such, those are in use within the default layer at this time.*/
             // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
 
             bindings = <
-   &kp ESC   &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8      &kp N9     &kp N0    &kp DEL
-   &kp TAB    &kp Q     &kp W     &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I       &kp O      &kp P   &kp BSPC
- &kp LCTRL    &kp A     &kp S     &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K       &kp L   &kp SEMI    &kp SQT
- &kp LSHFT    &kp Z     &kp X     &kp C      &kp V      &kp B   &kp LBKT   &kp RBKT      &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp SLASH    &kp RET
-&mo ADJUST  &kp ESC  &kp LALT  &kp LGUI  &kp LANG2  &mo LOWER  &kp SPACE  &kp SPACE  &mo RAISE  &kp LANG1   &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT
+         &kp ESC        &kp N1    &kp N2           &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8            &kp N9             &kp N0  &kp BACKSPACE
+         &kp TAB         &kp Q     &kp W            &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I             &kp O              &kp P     &kp DELETE
+       &kp LCTRL         &kp A     &kp S            &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K             &kp L           &kp SEMI        &kp SQT
+       &kp LSHFT         &kp Z     &kp X            &kp C      &kp V      &kp B      &mo 1      &mo 1      &kp N      &kp M  &kp COMMA        &kp PERIOD          &kp SLASH        &kp RET
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LALT  &kp PRINTSCREEN  &kp GRAVE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
             >;
         };
 
@@ -50,11 +51,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
 
             bindings = <
-   &trans    &trans  &trans    &trans    &trans     &trans                         &trans     &trans     &trans    &trans    &trans    &trans
-&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                      &kp CARET   &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR    &trans
-   &trans    &trans  &trans    &trans    &trans     &trans                         &trans  &kp UNDER   &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
-   &trans    &trans  &trans    &trans    &trans     &trans  &kp LPAR  &kp RPAR     &trans     &trans     &trans  &kp HOME   &kp END    &trans
-   &trans    &trans  &trans    &trans    &trans     &trans    &trans    &trans     &trans     &trans     &trans    &trans    &trans    &trans
+   &kp LG(DOWN)  &kp LS(LG(LEFT_ARROW))      &kp LG(UP)  &kp LG(LS(RIGHT_ARROW))           &kp LC(T)            &kp LC(W)                         &kp HOME      &kp PAGE_UP   &kp KP_NUMLOCK     &kp KP_SLASH       &kp KP_MULTIPLY          &kp BACKSPACE
+&kp LA(LC(TAB))         &kp LC(PAGE_UP)    &kp UP_ARROW        &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                          &kp END    &kp PAGE_DOWN  &kp KP_NUMBER_7  &kp KP_NUMBER_8       &kp KP_NUMBER_9            &kp KP_PLUS
+      &kp ENTER          &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)                  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp KP_NUMBER_4  &kp KP_NUMBER_5       &kp KP_NUMBER_6           &kp KP_MINUS
+         &trans                  &trans          &trans                   &trans              &trans               &trans  &trans  &trans           &trans          &kp END  &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3              &kp ENTER
+         &trans                  &trans          &trans                   &trans              &trans               &trans  &trans  &trans       &bl BL_DEC       &bl BL_INC       &kp KP_DOT  &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
         };
 
