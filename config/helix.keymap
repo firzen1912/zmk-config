@@ -50,11 +50,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
 
             bindings = <
-   &kp LG(DOWN)  &kp LS(LG(LEFT_ARROW))      &kp LG(UP)  &kp LG(LS(RIGHT_ARROW))           &kp LC(T)            &kp LC(W)                  &kp HOME    &kp PAGE_UP   &kp KP_NUMLOCK     &kp KP_SLASH       &kp KP_MULTIPLY          &kp BACKSPACE
-&kp LA(LC(TAB))         &kp LC(PAGE_UP)    &kp UP_ARROW        &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                   &kp END  &kp PAGE_DOWN  &kp KP_NUMBER_7  &kp KP_NUMBER_8       &kp KP_NUMBER_9            &kp KP_PLUS
-      &kp ENTER          &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)                    &trans         &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5       &kp KP_NUMBER_6           &kp KP_MINUS
-         &trans                  &trans          &trans                   &trans              &trans               &trans  &trans  &trans    &trans         &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3              &kp ENTER
-         &trans                  &trans          &trans                   &trans              &trans               &trans  &trans  &trans    &trans         &trans       &kp KP_DOT  &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+   &kp LG(DOWN)  &kp LS(LG(LEFT_ARROW))      &kp LG(UP)  &kp LG(LS(RIGHT_ARROW))           &kp LC(T)            &kp LC(W)                                    &kp HOME    &kp PAGE_UP   &kp KP_NUMLOCK     &kp KP_SLASH       &kp KP_MULTIPLY          &kp BACKSPACE
+&kp LA(LC(TAB))         &kp LC(PAGE_UP)    &kp UP_ARROW        &kp LC(PAGE_DOWN)  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                                     &kp END  &kp PAGE_DOWN  &kp KP_NUMBER_7  &kp KP_NUMBER_8       &kp KP_NUMBER_9            &kp KP_PLUS
+      &kp ENTER          &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)                                      &trans         &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5       &kp KP_NUMBER_6           &kp KP_MINUS
+         &trans                  &trans          &trans                   &trans              &trans               &trans           &trans           &trans    &trans         &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3              &kp ENTER
+         &trans                  &trans          &trans                   &trans              &trans               &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG    &trans         &trans       &kp KP_DOT  &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
         };
 
