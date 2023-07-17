@@ -143,7 +143,7 @@ As such, those are in use within the default layer at this time.*/
     };
 };
 
-/*LED display*/
+/*OLED display*/
 &pro_micro_i2c {
     status = "okay";
 
@@ -163,3 +163,4 @@ As such, those are in use within the default layer at this time.*/
         prechargep = <0x22>;
     };
 };
+
