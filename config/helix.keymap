@@ -25,7 +25,7 @@ As such, those are in use within the default layer at this time.*/
     chosen {
         zephyr,display = &oled;
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -72,11 +72,11 @@ As such, those are in use within the default layer at this time.*/
             // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
 
             bindings = <
-    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                            &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans        &trans                            &trans  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans        &trans   &sys_reset   &sys_reset  &trans  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans        &trans  &bootloader  &bootloader  &trans  &trans  &trans   &trans   &trans   &trans
+    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans  &trans  &trans   &trans   &trans   &trans
+    &trans        &trans        &trans        &trans        &trans  &out OUT_BLE                            &out OUT_BLE  &trans  &trans   &trans   &trans   &trans
+    &trans        &trans        &trans        &trans        &trans  &out OUT_USB   &sys_reset   &sys_reset  &out OUT_USB  &trans  &trans   &trans   &trans   &trans
+    &trans        &trans        &trans        &trans        &trans  &out OUT_TOG  &bootloader  &bootloader  &out OUT_TOG  &trans  &trans   &trans   &trans   &trans
             >;
         };
 
@@ -100,6 +100,7 @@ As such, those are in use within the default layer at this time.*/
 };
 
 /*RGB underglow*/
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
@@ -148,6 +149,7 @@ As such, those are in use within the default layer at this time.*/
 };
 
 /*OLED display*/
+
 &pro_micro_i2c {
     status = "okay";
 
@@ -167,4 +169,3 @@ As such, those are in use within the default layer at this time.*/
         prechargep = <0x22>;
     };
 };
-
