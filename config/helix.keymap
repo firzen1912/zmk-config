@@ -53,11 +53,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
 
             bindings = <
-&kp F1           &kp F2           &kp F3          &kp F4             &kp F5           &kp F6                                             &kp F7           &kp F8           &kp F9           &kp F10          &kp F11               &kp F12
-&kp LA(LC(TAB))  &kp LC(PAGE_UP)  &kp UP_ARROW    &kp LC(PAGE_DOWN)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                    &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_PLUS
-&kp ENTER        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &kp KP_MINUS
-&trans           &trans           &trans          &trans             &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans           &trans           &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &kp ENTER
-&trans           &trans           &trans          &trans             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &kp KP_DOT       &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp F1           &kp F2           &kp F3          &kp F4             &kp F5           &kp F6                                             &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
+&kp LA(LC(TAB))  &kp LC(PAGE_UP)  &kp UP_ARROW    &kp LC(PAGE_DOWN)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                    &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&kp ENTER        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans           &trans           &trans          &trans             &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans           &trans           &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER
+&bootloader      &sys_reset       &trans          &trans             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &kp KP_DOT       &kp KP_NUMBER_0  &sys_reset       &bootloader
             >;
         };
 
