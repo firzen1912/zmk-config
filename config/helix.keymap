@@ -160,5 +160,6 @@ As such, those are in use within the default layer at this time.*/
         com-invdir;
         com-sequential;
         prechargep = <0x22>;
+        inversion-on;
     };
 };
