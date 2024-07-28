@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <dt-bindings/led/led.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -22,9 +22,7 @@ However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'ei
 As such, those are in use within the default layer at this time.*/
 
 / {
-    chosen {
-        zephyr,display = &oled;
-    };
+    chosen { zephyr,display = &oled; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -38,10 +36,10 @@ As such, those are in use within the default layer at this time.*/
             // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
 
             bindings = <
-         &kp ESC        &kp N1    &kp N2           &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8            &kp N9             &kp N0  &kp BACKSPACE
-         &kp TAB         &kp Q     &kp W            &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I             &kp O              &kp P     &kp DELETE
-           &mo 2         &kp A     &kp S            &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K             &kp L           &kp SEMI        &kp SQT
-       &kp LSHFT         &kp Z     &kp X            &kp C      &kp V      &kp B      &mo 1      &mo 1      &kp N      &kp M  &kp COMMA        &kp PERIOD          &kp SLASH        &kp RET
+&kp ESC           &kp N1        &kp N2    &kp N3           &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9            &kp N0             &kp BACKSPACE
+&kp TAB           &kp Q         &kp W     &kp E            &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O             &kp P              &kp DELETE
+&mo 2             &kp A         &kp S     &kp D            &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
+&kp LSHFT         &kp Z         &kp X     &kp C            &kp V      &kp B      &mo 1      &mo 1      &kp N      &kp M      &kp COMMA  &kp PERIOD        &kp SLASH          &kp RET
 &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LALT  &kp PRINTSCREEN  &kp GRAVE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
             >;
         };
@@ -55,11 +53,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
 
             bindings = <
-   &kp LG(DOWN)  &kp LS(LG(LEFT_ARROW))      &kp LG(UP)  &kp LG(LS(RIGHT_ARROW))  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF                                    &rgb_ug RGB_EFR  &rgb_ug RGB_EFF   &kp KP_NUMLOCK     &kp KP_SLASH       &kp KP_MULTIPLY          &kp BACKSPACE
-&kp LA(LC(TAB))         &kp LC(PAGE_UP)    &kp UP_ARROW        &kp LC(PAGE_DOWN)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                    &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp KP_NUMBER_7  &kp KP_NUMBER_8       &kp KP_NUMBER_9            &kp KP_PLUS
-      &kp ENTER          &kp LEFT_ARROW  &kp DOWN_ARROW          &kp RIGHT_ARROW  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp KP_NUMBER_4  &kp KP_NUMBER_5       &kp KP_NUMBER_6           &kp KP_MINUS
-         &trans                  &trans          &trans                   &trans  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI           &trans           &trans  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3              &kp ENTER
-         &trans                  &trans          &trans                   &trans  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI       &kp KP_DOT  &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp F1           &kp F2           &kp F3          &kp F4             &kp F5           &kp F6                                             &kp F7           &kp F8           &kp F9           &kp F10          &kp F11               &kp F12
+&kp LA(LC(TAB))  &kp LC(PAGE_UP)  &kp UP_ARROW    &kp LC(PAGE_DOWN)  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                    &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_PLUS
+&kp ENTER        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                                    &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &kp KP_MINUS
+&trans           &trans           &trans          &trans             &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &trans           &trans           &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &kp ENTER
+&trans           &trans           &trans          &trans             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &kp KP_DOT       &kp KP_NUMBER_0  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
         };
 
@@ -72,11 +70,11 @@ As such, those are in use within the default layer at this time.*/
             // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
 
             bindings = <
-    &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &trans  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans  &out OUT_BLE                            &out OUT_BLE  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans  &out OUT_USB   &sys_reset   &sys_reset  &out OUT_USB  &trans  &trans   &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans  &out OUT_TOG  &bootloader  &bootloader  &out OUT_TOG  &trans  &trans   &trans   &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans        &trans  &trans  &trans  &trans  &bt BT_CLR_ALL
+&trans      &trans        &trans        &trans        &trans        &trans                                  &trans        &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &out OUT_BLE                            &out OUT_BLE  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &out OUT_USB  &sys_reset   &sys_reset   &out OUT_USB  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &out OUT_TOG  &bootloader  &bootloader  &out OUT_TOG  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -89,11 +87,11 @@ As such, those are in use within the default layer at this time.*/
             // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
 
             bindings = <
- &kp GRAVE      &kp EXCL        &kp AT      &kp HASH      &kp DLLR     &kp PRCNT                            &kp CARET         &kp AMPS        &kp ASTRK         &kp LPAR         &kp RPAR  &ext_power EP_TOG
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI    &rgb_ug RGB_TOG
-&bt BT_NXT  &out OUT_TOG  &out OUT_USB  &out OUT_BLE        &trans        &trans                      &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD             &trans
-&bt BT_PRV        &trans        &trans        &trans        &trans        &trans  &kp LBRC  &kp RBRC           &trans           &trans           &trans           &trans           &trans             &trans
-    &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans           &trans           &trans           &trans           &trans           &trans             &trans
+&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                         &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR         &ext_power EP_TOG
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG
+&bt BT_NXT  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans                            &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &trans
+&bt BT_PRV  &trans        &trans        &trans        &trans        &trans        &kp LBRC  &kp RBRC  &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans           &trans           &trans           &trans           &trans           &trans
             >;
         };
     };
@@ -103,10 +101,9 @@ As such, those are in use within the default layer at this time.*/
 
 &pinctrl {
     spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
-        };
+        group1 { psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>; };
     };
+
     spi3_sleep: spi3_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
@@ -120,9 +117,7 @@ As such, those are in use within the default layer at this time.*/
     status = "okay";
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
-    pinctrl-names =
-        "default",
-        "sleep";
+    pinctrl-names = "default", "sleep";
 
     led_strip: ws2812@0 {
         compatible = "worldsemi,ws2812-spi";
@@ -143,9 +138,7 @@ As such, those are in use within the default layer at this time.*/
 };
 
 / {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
+    chosen { zmk,underglow = &led_strip; };
 };
 
 /*OLED display*/
