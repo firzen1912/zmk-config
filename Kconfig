@@ -1,0 +1,10 @@
+menuconfig ZMK_HELIX_PROFILE_RGB
+    bool "Helix Bluetooth profile RGB indicator"
+    default y
+    depends on ZMK_BLE
+    depends on ZMK_RGB_UNDERGLOW
+    help
+      Set a distinct underglow color for each active Bluetooth profile.
+      Connected profiles are solid; disconnected, unpaired, or advertising
+      profiles use ZMK's slow breathe effect. On a split keyboard the central
+      invokes the global RGB behavior so both halves remain synchronized.
